@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    color :darkblue;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: bisque;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 20px;
+
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.game-status{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+}
+.game-grid{
+    margin-top: 50px;
+    background-color: rgb(153, 30, 30);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap : 10px;
+    
+}
+
+.game-cell{
+
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height : 200px;
+    width : 200px;
+    cursor: pointer;
+
+}
+
+.restart {  
+    display : flex;
+    margin : 40px auto;
+    padding: 8px;
+    border-radius: 8px;
+    color: darkblue;
+    background-color: lightsteelblue;
+    border : 1px solid lightgray;
+    align-items: center;
+    cursor: pointer;
+}
+
+.restart:hover{
+    color :rgb(153, 30, 30);
+}
+
+.x::after{
+    content: 'X';
+    color: mediumblue;
+    font-size: 225px;
+}
+
+.o::after{
+ 
+    content: 'O';
+    color: palevioletred;
+    font-size: 225px;
+}
+
+.won::after{
+  color : red;
+}
+
+/* In different media screens */
+
+@media only screen and (max-width: 1024px) {
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+     .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 175px;
+    } 
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+   .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 125px;
+    } 
+  }
